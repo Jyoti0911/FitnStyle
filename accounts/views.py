@@ -19,6 +19,9 @@ from carts.views import _cart_id
 from carts.models import Cart, CartItem
 import requests
 
+from orders.models import Order, OrderProduct
+
+
 # Create your views here.
 def login(request):
 
@@ -159,10 +162,10 @@ def dashboard(request):
     orders = Order.objects.order_by('-created_at').filter(user_id=request.user.id, is_ordered=True)
     orders_count = orders.count()
 
-    userprofile = UserProfile.objects.get(user_id=request.user.id)
+    #userprofile = UserProfile.objects.get(user_id=request.user.id)
     context = {
         'orders_count': orders_count,
-        'userprofile': userprofile,
+        #'userprofile': userprofile,
     }
     return render(request, 'accounts/dashboard.html', context)
 
