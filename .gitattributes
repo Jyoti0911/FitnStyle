@@ -1,0 +1,13 @@
+*.html linguist-detectable=false
+*.css linguist-detectable=false
+*.js linguist-detectable=false
+*.png linguist-detectable=false
+*.jpg linguist-detectable=false
+*.jpeg linguist-detectable=false
+*.svg linguist-detectable=false
+*.gif linguist-detectable=false
+*.ico linguist-detectable=false
+*.woff linguist-detectable=false
+*.ttf linguist-detectable=false
+/static/** linguist-detectable=false
+/templates/** linguist-detectable=false
